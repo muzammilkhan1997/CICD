@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Body and Button Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="colorButton" onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            // Generate a random color
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+            // Change body background color
+            document.body.style.backgroundColor = randomColor;
+
+            // Change button background color to match
+            const button = document.getElementById('colorButton');
+            button.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
